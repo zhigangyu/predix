@@ -1,0 +1,164 @@
+<link rel="import" href="../bower_components/polymer/polymer.html"/>
+<link rel="import" href="../bower_components/px-widget-cards/px-twoup.html"/>
+<link rel="import" href="../bower_components/px-widget-cards/px-threeup.html"/>
+<link rel="import" href="../bower_components/px-simple-bar-chart/px-simple-bar-chart.html"/>
+<link rel="import" href="../bower_components/px-simple-line-chart/px-simple-line-chart.html"/>
+
+<dom-module id="widgets-card">
+    <link rel="import" type="css" href="css/widgets-card.css"/>
+    <template>
+
+
+        <px-twoup id="sample-card-threeup" widget-header="Legends">
+            <div class="widget-1">
+                <h1 class="epsilon">Utilizition factor</h1>
+                <div class="flex">
+                    <div class="flex">
+                        <div class="large-value">72</div>
+                        <div class="flex flex--col u-ml-">
+                            <small class="caps">Min</small>
+                            <small class="caps muted">mw</small>
+                        </div>
+                    </div>
+
+                    <div class="u-ml+ flex">
+                        <div class="large-value">98</div>
+                        <div class="flex flex--col u-ml-">
+                            <small class="caps">Max</small>
+                            <small class="caps muted">mw</small>
+                        </div>
+                    </div>
+                </div>
+
+                <px-simple-line-chart
+                        id="demo-line-chart"
+                        line-data="{{outputCapacityData}}"
+                        threshold="100"
+                        columns="8"
+                        rows="8"
+                        min="1"
+                        width="auto"
+                        max="150"
+                        min-label="false"
+                        max-label="false">
+                </px-simple-line-chart>
+
+                <div>
+                    <small class="muted">Past 7 Days</small>
+                </div>
+            </div>
+
+            <div class="widget-2">
+
+                <h1 class="epsilon label">Alarms</h1>
+
+                <div class="muted label">Current Count</div>
+                <px-simple-bar-chart
+                        id="open-cases"
+                        width="auto"
+                        chart-data="[
+                        [1,2,3,5,6,3,5,6,1,2,3,4],
+                        [5,2,1,2,3,7,5,3,4,5,6,7],
+                        [1,3,1,3,4,4,2,2,5,6,7,8],
+                        [4,5,6,3,2,3,4,2,5,3,2,1],
+                        [1,2,3,5,6,3,4,2,3,1,2,3],
+                        [5,2,1,2,3,1,2,3,5,6,7,8],
+                        [1,3,1,3,4,4,5,3,7,8,9,2]
+                    ]"
+                        
+                        >
+                </px-simple-bar-chart>
+
+                <div>
+                    <small class="muted label">{{w2l}}</small>
+                </div>
+            </div>
+
+
+
+        </px-threeup>
+
+
+    </template>
+</dom-module>
+<script>
+    Polymer({
+        is: 'widgets-card',
+        behaviors: [px.card],
+        properties: {
+            data: {
+                type: Object
+            }
+        },
+        created: function(){
+            //default data
+            this.data = {}
+        },
+        init: function () {
+            //use hard code data if not provided from attributes
+            this.w2l = this.context.d || "post 7 days";
+
+            this.openLegendData = this.data.openCasesData || [
+                [1, 1, 2, 5, 3, 2, 5, 3]
+            ];
+
+            this.openLegendLabel = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+
+
+            this.outputCapacityData = this.data.outputCapacityData || [
+                               [1397100000000, 96],
+                [1397110000000, 94],
+                [1397120000000, 96],
+                [1397130000000, 96],
+                [1397140000000, 96],
+                [1397150000000, 96],
+                [1397160000000, 84],
+                [1397170000000, 80],
+                [1397180000000, 96],
+                [1397190000000, 88],
+                [1397200000000, 96],
+                [1397210000000, 94],
+                [1397220000000, 96],
+                [1397230000000, 92],
+                [1397240000000, 96],
+                [1397250000000, 96],
+                [1397260000000, 84],
+                [1397270000000, 78],
+                [1397280000000, 96],
+                [1397290000000, 96],
+                [1397300000000, 96],
+                [1397310000000, 92],
+                [1397320000000, 88],
+                [1397330000000, 94],
+                [1397340000000, 80],
+                [1397350000000, 88],
+                [1397360000000, 92],
+                [1397370000000, 87],
+                [1397380000000, 80],
+                [1397390000000, 78],
+                [1397400000000, 76],
+                [1397410000000, 92],
+                [1397420000000, 96],
+                [1397430000000, 90],
+                [1397440000000, 96],
+                [1397450000000, 98],
+                [1397460000000, 95],
+                [1397470000000, 78],
+                [1397480000000, 96],
+                [1397490000000, 96],
+                [1397500000000, 96],
+                [1397510000000, 94],
+                [1397520000000, 96],
+                [1397530000000, 96],
+                [1397540000000, 96],
+                [1397550000000, 96],
+                [1397560000000, 84],
+                [1397570000000, 80],
+                [1397580000000, 96],
+                [1397590000000, 88],
+                [1397600000000, 96]
+
+            ];
+        }
+    });
+</script>
