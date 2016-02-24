@@ -25,6 +25,10 @@ var config = {
     '/api/view-service(.*)': {
       url: 'https://predix-views.run.aws-usw02-pr.ice.predix.io/v1$1',
       instanceId: '3fa09a0e-626e-4d9f-92bc-d929ac262bee'
+    },
+    '/api/ms(.*)': {
+      url: 'http://localhost:8080/api$1',
+      instanceId: '3fa09a0e-626e-4d9f-92bc-d929ac262bee'
     }
   }
 };

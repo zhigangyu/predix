@@ -1,169 +1,106 @@
 [
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-compressionratio",
-        "units": "psi",
-        "currentReading": "0.88"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-dischargepressure",
-        "units": "psi",
-        "currentReading": "2.605"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-suctionpressure",
-        "units": "m/s",
-        "currentReading": "18.331"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-compressionratio",
-        "units": "psi",
-        "currentReading": "0.88"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-dischargepressure",
-        "units": "psi",
-        "currentReading": "2.605"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-suctionpressure",
-        "units": "m/s",
-        "currentReading": "18.331"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-compressionratio",
-        "units": "psi",
-        "currentReading": "0.88"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-dischargepressure",
-        "units": "psi",
-        "currentReading": "2.605"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-suctionpressure",
-        "units": "m/s",
-        "currentReading": "18.331"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-compressionratio",
-        "units": "psi",
-        "currentReading": "0.88"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-dischargepressure",
-        "units": "psi",
-        "currentReading": "2.605"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-suctionpressure",
-        "units": "m/s",
-        "currentReading": "18.331"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-compressionratio",
-        "units": "psi",
-        "currentReading": "0.88"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-dischargepressure",
-        "units": "psi",
-        "currentReading": "2.605"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-suctionpressure",
-        "units": "m/s",
-        "currentReading": "18.331"
-    },        {
-    "lastOccurance": "2014-02-17, 19:33:51",
-    "assetPath": "/Unit1/HRSG",
-    "point": "39VS11",
-    "meter": "crank-frame-compressionratio",
-    "units": "psi",
-    "currentReading": "0.88"
-},
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-dischargepressure",
-        "units": "psi",
-        "currentReading": "2.605"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-suctionpressure",
-        "units": "m/s",
-        "currentReading": "18.331"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-compressionratio",
-        "units": "psi",
-        "currentReading": "0.88"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-dischargepressure",
-        "units": "psi",
-        "currentReading": "2.605"
-    },
-    {
-        "lastOccurance": "2014-02-17, 19:33:51",
-        "assetPath": "/Unit1/HRSG",
-        "point": "39VS11",
-        "meter": "crank-frame-suctionpressure",
-        "units": "m/s",
-        "currentReading": "18.331"
-    }
-]
+  {
+    "id": 1,
+    "name": "MHW01",
+    "type": "G",
+    "duration": 872,
+    "start": "2015-05-26 19:37:35",
+    "efficiency": 61
+  },
+  {
+    "id": 2,
+    "name": "MHW02",
+    "type": "M",
+    "duration": 962,
+    "start": "2015-05-13 19:37:12",
+    "efficiency": 50
+  },
+   {
+    "id": 3,
+    "name": "MHW03",
+    "type": "Z",
+    "duration": 743,
+    "start": "2015-05-20 23:42:48",
+    "efficiency": 79
+  },
+   {
+    "id": 4,
+    "name": "MHW04",
+    "type": "B",
+    "duration": 612,
+    "start": "2015-05-16 19:47:15",
+    "efficiency": 57
+  },
+  {
+    "id": 5,
+    "name": "MHW05",
+    "type": "K",
+    "duration": 579,
+    "start": "2015-05-08 17:41:57",
+    "efficiency": 52
+  },
+  {
+    "id": 6,
+    "name": "MHW06",
+    "type": "H",
+    "duration": 765,
+    "start": "2015-05-03 9:42:53",
+    "efficiency": 83
+  },
+   {
+    "id": 7,
+    "name": "MHW07",
+    "type": "W",
+    "duration": 772,
+    "start": "2015-05-14 13:54:48",
+    "efficiency": 82
+  },
+  {
+    "id": 8,
+    "name": "MHW08",
+    "type": "G",
+    "duration": 864,
+    "start": "2015-05-15 15:40:34",
+    "efficiency": 78
+  },
+  {
+    "id": 9,
+    "name": "MHW09",
+    "type": "M",
+    "duration": 617,
+    "start": "2015-05-27 12:52:57",
+    "efficiency": 80
+  },
+   {
+    "id": 10,
+    "name": "MHW01",
+    "type": "G",
+    "duration": 730,
+    "start": "2015-05-01 23:40:24",
+    "efficiency": 54
+  },
+   {
+    "id": 11,
+    "name": "MHW02",
+    "type": "M",
+    "duration": 942,
+    "start": "2015-05-11 17:37:53",
+    "efficiency": 79
+  },
+   {
+    "id": 12,
+    "name": "MHW03",
+    "type": "Z",
+    "duration": 821,
+    "start": "2015-05-05 22:59:10",
+    "efficiency": 75
+  },
+   {
+    "id": 13,
+    "name": "MHW04",
+    "type": "B",
+    "duration": 775,
+    "start": "2015-05-19 20:17:58",
+    "efficiency": 64
+  }
+  ]

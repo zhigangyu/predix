@@ -42,6 +42,18 @@ define(['angular', 'angular-ui-router'], function(angular) {
             .state('blanksubpage', {
                 url: '/blanksubpage',
                 templateUrl: 'views/blank-sub-page.html'
+            })
+            .state('lathestatus', {
+                parent: 'secure',
+                url: '/lathestatus',
+                templateUrl: 'views/lathestatus.html',
+                controller: 'LatheStatusCtrl'
+            })
+            .state('showlathe', {
+                parent: 'secure',
+                url: '/showlathe/:data',
+                templateUrl: 'views/showlathe.html',
+                controller: 'ShowLatheCtrl'
             });
 
 
