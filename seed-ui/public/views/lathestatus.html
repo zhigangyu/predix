@@ -1,0 +1,25 @@
+    <style>
+        .page-list .pagination {float:left;}
+        .page-list .pagination span {cursor: pointer;}
+        .page-list .pagination .separate span{cursor: default; border-top:none;border-bottom:none;}
+        .page-list .pagination .separate span:hover {background: none;}
+        .page-list .page-total {float:left; margin: 25px 20px;}
+        .page-list .page-total input, .page-list .page-total select{height: 26px; border: 1px solid #ddd;}
+        .page-list .page-total input {width: 40px; padding-left:3px;}
+        .page-list .page-total select {width: 50px;}
+
+.wrapper{width:100%;height:auto;padding:61px 35px 0 264px;box-sizing:border-box;display:block;}
+.cont_box{float:left;padding:40px 0 0 40px;box-sizing:border-box;display:block;position:relative;}
+.p_pic{width:100%;padding:10px;border:1px solid #66c8e7;display:block;box-sizing:border-box;}
+.p_txt{height:40px;line-height:40px;overflow:hidden;background:#49afcd;color:#fff;text-align:center;padding:5px;border:1px solid #66c8e7;}
+.p_icon{position:absolute;right:3px;top:43px;}
+
+
+    </style>
+<px-card icon="fa-suitcase" header-text="hello {{clock.now | date:'yyyy-MM-dd HH:mm:ss'}}" chevron>
+<div ng-repeat="item in lathes" class="cont_box">
+           <div class="p_pic"><img ng-src="images/lathe/{{$index % 3}}.jpg" ng-click="showlathe(item.id)" width="100%" height="100%" /></div>
+           <div class="p_txt">{{ item.latheName }}</div>
+           <div class="p_icon"><img ng-src="images/{{item.status==0?'red':'green'}}.gif"></div>
+        </div>
+</px-card>

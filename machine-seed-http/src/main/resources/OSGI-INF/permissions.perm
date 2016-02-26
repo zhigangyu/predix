@@ -1,0 +1,39 @@
+# If no permissions.perm file exist, bundle is granted for all permissions
+# i.e. (java.security.AllPermission "*" "*")
+
+# List imports as wild card, export services are listed out.
+(org.osgi.framework.PackagePermission "*" "import")
+(org.osgi.framework.PackagePermission "*" "export")
+
+# Registered services
+(org.osgi.framework.ServicePermission "com.pactera.predix.seed.machine.httpclient.IHttpClientSampleRestServer" "register")
+(org.osgi.framework.ServicePermission "com.ge.dspmicro.httpclient.api.IHttpClient" "register")
+(org.osgi.framework.ServicePermission "com.ge.dspmicro.httpclient.api.IHttpClientFactory" "register")
+
+# Get other services.
+(org.osgi.framework.ServicePermission "com.pactera.predix.seed.machine.httpclient.IHttpClientSampleRestServer" "get")
+(org.osgi.framework.ServicePermission "com.ge.dspmicro.httpclient.api.IHttpClient" "get")
+(org.osgi.framework.ServicePermission "com.ge.dspmicro.httpclient.api.IHttpClientFactory" "get")
+(org.osgi.framework.ServicePermission "com.ge.dspmicro.security.sslcontext.api.ISSLContextFactoryService" "get")
+(org.osgi.framework.ServicePermission "com.ge.dspmicro.security.admin.api.ISecurityUtils" "get")
+(org.osgi.framework.ServicePermission "org.osgi.service.cm.ConfigurationAdmin" "get")
+
+# Bundle Wiring for pax logging.
+(org.osgi.framework.AdaptPermission "(adaptClass=org.osgi.framework.wiring.BundleRevision)" "adapt")
+
+# Generic stuff
+(org.osgi.service.cm.ConfigurationPermission "*" "configure")
+(org.osgi.service.event.TopicPermission "*" "publish")
+(java.util.PropertyPermission "*" "read")
+(java.lang.RuntimePermission "getClassLoader")
+(java.lang.RuntimePermission "shutdownHooks")
+(java.lang.reflect.ReflectPermission "newProxyInPackage.*")
+(java.lang.RuntimePermission "setContextClassLoader")
+(java.lang.reflect.ReflectPermission "suppressAccessChecks")
+(java.lang.RuntimePermission "accessDeclaredMembers")
+
+# http client permissions
+(java.net.SocketPermission "*" "accept,connect,listen,resolve")
+
+# For SSL it reads keystores.
+(java.io.FilePermission "*" "read")
