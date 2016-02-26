@@ -1,0 +1,7 @@
+---
+applications:
+  - name: seed-data-ms
+    buildpack: java_buildpack
+    path: target/seed-data-0.0.1.jar
+services:
+    - pgdb

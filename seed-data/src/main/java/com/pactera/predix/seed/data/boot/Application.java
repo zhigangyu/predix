@@ -9,6 +9,7 @@ import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletCon
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
@@ -35,7 +36,7 @@ public class Application extends ResourceServerConfigurerAdapter {
 	
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
-		http.antMatcher("/**").authorizeRequests().anyRequest()
+		http.antMatcher("/api/**").authorizeRequests().anyRequest()
 				.authenticated();
 	}
 
@@ -44,5 +45,7 @@ public class Application extends ResourceServerConfigurerAdapter {
 			throws Exception {
 		resources.resourceId("openid");
 	}
+	
+	
 
 }
