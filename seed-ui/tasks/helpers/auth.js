@@ -15,6 +15,7 @@ module.exports = {
     return this.getMiddlewares();
   },
   getAccessTokenFromCode: function (authCode, successCallback, errorCallback) {
+    console.error('authCode: ', authCode);
     var request = require('request');
     var self = this;
     var options = {

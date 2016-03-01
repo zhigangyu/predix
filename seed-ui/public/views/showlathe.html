@@ -1,3 +1,80 @@
-<px-card icon="fa-suitcase" header-text="Show Lathe" chevron>
-{{stateid}}
+<style>
+.wrapper{width:100%;height:auto;padding:61px 35px 0 264px;box-sizing:border-box;display:block;}
+.cont_box{float:left;padding:40px 0 0 40px;box-sizing:border-box;display:block;position:relative;}
+.p_pic{width:100%;padding:10px;border:1px solid #66c8e7;display:block;box-sizing:border-box;border-radius:12px 12px 0 0}
+.p_txt{background:#49afcd;color:#fff;text-align:center;padding:5px;border:1px solid #66c8e7;}
+.p_icon{position:absolute;right:3px;top:43px;}
+.box_shadow{box-shadow: 0 0 8px #aaa; cursor:pointer;border-radius:12px 12px 0 0}
+.p_pic_2{width:100%;padding:10px;border:1px solid #f77a70;display:block;box-sizing:border-box;border-radius:12px 12px 0 0}
+.p_txt_2{background:#fa9087;color:#fff;text-align:center;padding:5px;border:1px solid #f77a70;}
+
+.detail_left{float:left;width:30%;padding:3%;box-sizing:border-box;}
+.detail_right{float:right;width:70%;padding:3%;box-sizing:border-box;padding-left:0;}
+.detail_img{width:47%;margin-right:6px;margin-bottom:1px;float:left;box-sizing:border-box;}
+.detail_img img{border:1px solid #49afcd;box-shadow:0 0 5px #aaa;}
+.detail_right td{height:40px;padding-left:10px;}
+.detail_right tr:nth-of-type(even) {background:#eceff1;}
+.detail_right td:nth-of-type(even) {font-weight:bold;color:#4098b2}
+.detail_title{background:#49afcd;color:#fff;text-align:center;height:40px;line-height:40px;border-radius:12px 12px 0 0;font-weight:bold;}
+.box_shadow:hover{box-shadow:0 0 10px #00CCFF}
+.box_shadow_2{box-shadow: 0 0 8px #aaa; cursor:pointer;border-radius:12px 12px 0 0}
+.box_shadow_2:hover{box-shadow:0 0 10px #FF6666}
+</style>
+<px-card icon="fa-suitcase" header-text="Product Detail" chevron>
+<!--{{stateid}}-->
+    <div class="product_list_box">
+        <div class="detail_left">
+             <div class="detail_img"><img src="images/0.jpg" width="100%" height="100%" style="border-radius:12px 0 12px 0"></div>
+             <div class="detail_img"><img src="images/0.jpg" width="100%" height="100%" style="border-radius:0 12px 0 12px"></div>
+             <div class="detail_img" ><img src="images/0.jpg" width="100%" height="100%" style="border-radius:0 12px 0 12px"></div>
+             <div class="detail_img" ><img src="images/0.jpg" width="100%" height="100%" style="border-radius:12px 0 12px 0"></div>
+        </div>
+        <div class="detail_right">
+        <div class="detail_title">Product Detail</div>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>Machine Status:</td>
+    <td>IN CYCLE</td>
+  </tr>
+  <tr>
+    <td> Machine Mode:</td>
+    <td>JOG</td>
+  </tr>
+  <tr>
+    <td>Main Program #:</td>
+    <td>O2</td>
+  </tr>
+  <tr>
+    <td>Active Program #: </td>
+    <td>O2</td>
+  </tr>
+  <tr>
+    <td>Active RPM:</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>Active Feedrate: </td>
+    <td>0.00</td>
+  </tr>
+  <tr>
+    <td> Spindle Override: </td>
+    <td>100%</td>
+  </tr>
+  <tr>
+    <td>Feedrate Override: </td>
+    <td>Manual Mode</td>
+  </tr>
+  <tr>
+    <td>Rapid Override: Slow</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>X  Y   Z </td>
+  </tr>
+</table>
+
+        </div>
+    </div> 
+
 </px-card>
