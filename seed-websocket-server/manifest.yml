@@ -1,0 +1,6 @@
+applications:
+- name: seed-websocket-server
+  memory: 512M
+  instances: 1
+  timeout: 180
+  path: target/seed-websocket-server-0.1.3.jar

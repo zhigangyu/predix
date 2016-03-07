@@ -1,0 +1,164 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.pactera.predix.seed</groupId>
+	<artifactId>machine-seed-websocket</artifactId>
+	<packaging>bundle</packaging>
+	<version>0.0.1</version>
+	<name>Predix Machine WebSocket for Seed Demo</name>
+	<description>Predix Machine WebSocket for Seed Demo</description>
+
+	<properties>
+		<!-- Maven Build Properties -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source.version>1.7</maven.compiler.source.version>
+		<maven.compiler.target.version>1.7</maven.compiler.target.version>
+		<clover.bundle.import />
+		<maven.archetype.archetype-packaging.version>2.4</maven.archetype.archetype-packaging.version>
+		<maven.plugins.maven-compiler-plugin.version>3.3</maven.plugins.maven-compiler-plugin.version>
+		<maven.plugins.maven-assembly-plugin.version>2.4</maven.plugins.maven-assembly-plugin.version>
+		<maven.plugins.maven-release-plugin.version>2.5.3</maven.plugins.maven-release-plugin.version>
+		<maven.plugins.maven-jarsigner-plugin.version>1.4</maven.plugins.maven-jarsigner-plugin.version>
+		<maven.plugins.maven-javadoc-plugin.version>2.10.3</maven.plugins.maven-javadoc-plugin.version>
+		<maven.plugins.maven-archetype-plugin.version>2.4</maven.plugins.maven-archetype-plugin.version>
+		<maven.plugins.maven-resources-plugin.version>2.7</maven.plugins.maven-resources-plugin.version>
+		
+		<org.apache.felix.maven-bundle-plugin.version>3.0.1</org.apache.felix.maven-bundle-plugin.version>
+		
+		<!-- 3rd Party package versions -->
+		<import.org.osgi.framework>"[1.7,2)"</import.org.osgi.framework>
+
+		<import.org.osgi.service.cm>"[1.5,2)"</import.org.osgi.service.cm>
+		<import.org.osgi.service.component>"[1.2,2)"</import.org.osgi.service.component>
+		<import.org.osgi.service.condpermadmin>"[1.1,2)"</import.org.osgi.service.condpermadmin>
+		<import.org.osgi.service.http>"[1.2,2)"</import.org.osgi.service.http>
+		<import.org.osgi.service.util>"[1.0,2)"</import.org.osgi.service.util>
+		<import.org.osgi.service.useradmin>"[1.1,2)"</import.org.osgi.service.useradmin>
+		<import.org.osgi.util.tracker>"[1.5,2)"</import.org.osgi.util.tracker>
+		
+		<import.org.slf4j>"[1.7,2)"</import.org.slf4j>
+		<org.osgi.core.version>5.0.0</org.osgi.core.version>
+		<org.osgi.compendium.version>5.0.0</org.osgi.compendium.version>
+		<org.slf4j.version>1.7.12</org.slf4j.version>
+		<biz.aQute.bndlib.version>3.0.0</biz.aQute.bndlib.version>
+		<javax.ws.rs.version>2.0.1</javax.ws.rs.version>
+	</properties>
+
+	<dependencies>
+		<!-- OSGi -->
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.core</artifactId>
+			<version>${org.osgi.core.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.compendium</artifactId>
+			<version>${org.osgi.compendium.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Predix Machine -->
+
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>javax.ws.rs-api</artifactId>
+			<version>${javax.ws.rs.version}</version>
+		</dependency>
+
+
+		<!-- DS Annotation Dependency -->
+		<dependency>
+			<groupId>biz.aQute.bnd</groupId>
+			<artifactId>biz.aQute.bndlib</artifactId>
+			<version>${biz.aQute.bndlib.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Java Websocket API Dependency -->
+		<dependency>
+			<groupId>javax.websocket</groupId>
+			<artifactId>javax.websocket-api</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.plugins.maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${maven.compiler.source.version}</source>
+					<target>${maven.compiler.target.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>${maven.plugins.maven-assembly-plugin.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>${org.apache.felix.maven-bundle-plugin.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jarsigner-plugin</artifactId>
+				<version>${maven.plugins.maven-jarsigner-plugin.version}</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
+						<Bundle-Version>${project.version}</Bundle-Version>
+						<Import-Package>
+							org.slf4j;version=${import.org.slf4j};provider=paxlogging,
+							org.osgi.service.component;version=${import.org.osgi.service.component},
+							org.osgi.framework;version=${import.org.osgi.framework},
+							org.osgi.service.cm;version=${import.org.osgi.service.cm},
+							javax.websocket,
+							javax.websocket.server
+							${clover.bundle.import}
+						</Import-Package>
+						<Export-Package>
+						</Export-Package>
+						<Service-Component>*</Service-Component>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<profiles>
+		<profile>
+			<id>with.clover</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.atlassian.maven.plugins</groupId>
+						<artifactId>maven-clover2-plugin</artifactId>
+						<version>${maven-clover2-plugin.version}</version>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>
