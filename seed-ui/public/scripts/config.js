@@ -67,6 +67,7 @@ require.config({
 
         lodash: '../bower_components/lodash/dist/lodash.min',
         jquery: '../bower_components/jquery/dist/jquery.min',
+        'pie-chart': '../bower_components/pie-chart/dist/pie-chart.min',
 
     },
     priority: [
@@ -93,6 +94,9 @@ require.config({
         },
         'px-datasource': {
             deps: ['angular', 'lodash']
+        },
+        'pie-chart': {
+            deps: ['angular']
         },
         'app': {
             deps: ['angular']

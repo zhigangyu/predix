@@ -1,6 +1,6 @@
 ---
 applications:
-  - name: predix-seed-ray
+  - name: pcsz
     buildpack: predix_openresty_buildpack
     path: dist
     memory: 64M

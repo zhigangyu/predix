@@ -1,39 +1,82 @@
     <style>
-        .page-list .pagination {float:left;}
-        .page-list .pagination span {cursor: pointer;}
-        .page-list .pagination .separate span{cursor: default; border-top:none;border-bottom:none;}
-        .page-list .pagination .separate span:hover {background: none;}
-        .page-list .page-total {float:left; margin: 25px 20px;}
-        .page-list .page-total input, .page-list .page-total select{height: 26px; border: 1px solid #ddd;}
-        .page-list .page-total input {width: 40px; padding-left:3px;}
-        .page-list .page-total select {width: 50px;}
+.m_r_61{margin-right:60px;}
+.m_r_40{margin-right:28px;}
+.m_b_35{margin-bottom:35px;}
 
-.cont_box{float:left;padding:40px 0 0 40px;box-sizing:border-box;display:block;position:relative;}
-.p_pic{width:100%;padding:10px;border:1px solid #66c8e7;display:block;box-sizing:border-box;border-radius:12px 12px 0 0}
-.p_txt{background:#49afcd;color:#fff;text-align:center;padding:5px;border:1px solid #66c8e7;}
-.p_icon{position:absolute;right:3px;top:43px;}
-.box_shadow{box-shadow: 0 0 8px #aaa; cursor:pointer;border-radius:12px 12px 0 0}
-.p_pic_2{width:100%;padding:10px;border:1px solid #f77a70;display:block;box-sizing:border-box;border-radius:12px 12px 0 0}
-.p_txt_2{background:#fa9087;color:#fff;text-align:center;padding:5px;border:1px solid #f77a70;}
+.wrapper{width:100%;height:auto;padding:70px 35px 0 271px;box-sizing:border-box;display:block;}
+.product_cont_box{padding:30px 0 0 40px;}
+.product_box{width:175px;height:192px;border:1px solid #8D8D8D;float:left;padding:0;box-sizing:border-box;display:block;}
+.product_img_box{width:100%;height:102px;position:relative;}
+.p_name{position:absolute;left:0;bottom:0;background:rgba(0,0,0,0.5);width:100%;height:30px;line-height:31px;text-align:center;color:#fff;font-size:20px;z-index:9999;}
+.product_button{height:38px;line-height:38px;padding:0 5px 0 3px;background:#eeeeee;}
+.icon_status{float:left;margin-top:4px;}
+.btn_detail{float:right;width:90px;height:24px;line-height:23px;background:#4F6094;text-align:center;color:#fff;font-size:12px;border:0;border-radius:5px;margin-top:7px;}
+.btn_detail_readonly{float:right;width:90px;height:24px;line-height:23px;background:#aaa;text-align:center;color:#eee;font-size:12px;border:0;border-radius:5px;margin-top:7px;}
+.serial_number{height:25px;background:#eee;line-height:25px;color:#333;padding-left:5px;font-size:14px;}
 
-.detail_left{float:left;width:30%;padding:3%;box-sizing:border-box;}
-.detail_right{float:right;width:70%;padding:3%;box-sizing:border-box;padding-left:0;}
-.detail_img{width:47%;margin-right:6px;margin-bottom:1px;float:left;box-sizing:border-box;}
-.detail_img img{border:1px solid #49afcd;box-shadow:0 0 5px #aaa;}
-.detail_right td{height:40px;padding-left:10px;}
-.detail_right tr:nth-of-type(even) {background:#eceff1;}
-.detail_right td:nth-of-type(even) {font-weight:bold;color:#4098b2}
-.detail_title{background:#49afcd;color:#fff;text-align:center;height:40px;line-height:40px;border-radius:12px 12px 0 0;font-weight:bold;}
-.box_shadow:hover{box-shadow:0 0 10px #00CCFF}
-.box_shadow_2{box-shadow: 0 0 8px #aaa; cursor:pointer;border-radius:12px 12px 0 0}
-.box_shadow_2:hover{box-shadow:0 0 10px #FF6666}
+.cont_detail_box{margin:0;padding:0;width:100%;}
+.detail_topMsg{height:96px;border-bottom:1px solid #8d8d8d;font-size:24px;color:#666;}
+.detail_topMsg div{height:96px;line-height:96px;float:left;padding-left:30px;box-sizing:border-box;}
+.page_name{width:25%;}
+.page_name span{float:left;}
+.product_name{width:50%;}
+.p_status{width:133px;height:45px;background:url(../images/status_open.png) no-repeat;float:right;margin-right:30px;margin-top:26px;}
+.date{width:25%;float:right!important;border-left:1px solid #8d8d8d;}
+.date p{margin:0;padding:0;line-height:100%;}
+.day{float:left;font-size:48px;color:#394553;height:96px;line-height:96px;}
+.year{float:right;}
+.year span{display:block;text-align:right;}
+.txt_name{float:left;}
+.pic_small{width:70px;height:70px;background:url(../images/product_00.jpg) no-repeat;background-size:70px 70px;border:1px solid #ccc;border-radius:6px;float:left;margin-top:12px;margin-right:12px;}
+
+.product_detail_box{margin:30px;padding:0;}
+.p_pic_large{width:43%;float:left;margin:0;padding:0;height:455px;oveflow:hidden;}
+.detail_table{width:57%;float:left;}
+.detail_table table{background:#eee;color:#333;}
+.detail_table th{background:#4F6094;width:40%;height:38px;border-bottom:1px solid #627383;text-align:left;padding-left:15px;box-sizing:border-box;font-weight:normal!important;font-size:16px;color:#fff;}
+.detail_table td{border-bottom:1px solid #aaa;text-align:center;}
+.arrow_white{margin-right:10px;}
+
+.graph_box{width:43%;float:right;}
+.graph_box_two{height:163px;box-shadow:0 0px 5px #ccc;padding:15px;margin-bottom:30px;margin-left:30px;}
+.graph_title{font-size:18px;color:#333;display:block;margin-bottom:10px;}
+.speed_value{float:left;font-size:14px;color:#666;margin-top:30px;}
+.value{border-radius:30px;box-shadow:0 0 5px #aaa;font-size:20px;width:50px;height:30px;line-height:31px;background:#4F6094;text-align:center;display:inline-block;color:#fff;}
+.temperature_graph{float:right;margin-right:10%;}
+.temperature_num{width:105px;height:60px;border-radius:30px;box-shadow:0 0px 5px #999;text-align:center;line-height:65px;float:right;margin-right:20%;font-size:48px;color:#666;margin-top:15%;}
+.rapid_left{font-size:26px;color:#666;margin-left:6%;margin-top:12%;}
+.rapid_right{margin-right:5%;margin-top:7%;}
+
+.switch_1_bg{width:130px;height:22px;background:#4F6094;border-radius:30px;box-shadow:1px 1px 1px #ccc;margin:0 auto;}
+.switch_btn{width:65px;height:22px;line-height:24px;border-radius:30px;font-size:18x;text-align:center;float:left;}
+.on{background:#fff;box-shadow:2px 2px 3px #ccc inset;color:#333;}
+.off{background:none;color:#8595ac;}
+.switch_2_bg{width:195px;height:22px;background:#4F6094;border-radius:30px;box-shadow:1px 1px 1px #ccc;margin:0 auto;}
+
+
+
+.f_l{float:left;}
+.f_r{float:right;}
 
 
     </style>
-<px-card icon="fa-suitcase" header-text="Machine Tool Status" chevron>
-<div ng-repeat="item in lathes" class="cont_box">
-           <div class="p_pic"><img ng-src="images/{{$index % 3}}.jpg" ng-click="showlathe(item.id)" width="100%" height="100%" /></div>
-           <div class="p_txt">{{ item.latheName }}<span style="font-size:13px;"><br>Machine Status: IN CYCLE <br> Machine Mode: JOG<br> Main Program #: O2</span></div>
-           <div class="p_icon"><img ng-src="images/{{item.status==0?'red':'green'}}.gif"></div>
-        </div>
+<px-card icon="fa-suitcase" header-text="Machine Status" chevron>
+
+<div class="product_box m_r_40 m_b_35" ng-repeat="item in lathes">
+          <div class="product_img_box">
+              <img src="images/product_00.jpg" width="173" height="102">
+              <div class="p_name">-- {{ item.latheCode }} --</div>
+          </div>
+          <div class="serial_number" style="line-height:30px;">Part number: A267180-1</div>
+          <div class="serial_number">Procedure: op100</div>
+          <div class="product_button">
+              <span class="icon_status">
+              <img ng-src="images/yellow.png" ng-if="item.status == 3">
+              <img ng-src="images/red.png" ng-if="item.status == 2">
+              <img src="images/green.png" ng-if="item.status == 1">
+              <img src="images/gray.png" ng-if="item.status == 0">
+              </span>
+              <span class="btn_detail_box" ng-if="item.status != 0"><input type="button" value="Detail >" class="btn_detail" ng-click="showlathe(item.latheCode)"></input></span>
+          </div>
+       </div>
 </px-card>

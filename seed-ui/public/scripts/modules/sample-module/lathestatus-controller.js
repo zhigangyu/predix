@@ -10,14 +10,14 @@ define(['angular', './sample-module'], function(angular, sampleModule) {
         
         var updateClock = function(){
             //$scope.clock.now = new Date();
-            $http.get('/api/ms/lathes')
+            $http.get('/api/ms/machines')
                 .success(function(response) {
                     $scope.lathes = response;
                 }).error(function(){
             });
         };
         setInterval(function(){
-            $scope.$apply(updateClock);
+            //$scope.$apply(updateClock);
         },9000);
 
         updateClock();

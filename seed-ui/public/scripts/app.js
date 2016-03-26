@@ -9,7 +9,8 @@ define([
     'routes',
     'interceptors',
     'px-datasource',
-    'ng-bind-polymer'
+    'ng-bind-polymer',
+    'pie-chart'
 ], function ($, angular) {
     'use strict';
 
@@ -23,7 +24,9 @@ define([
         'app.interceptors',
         'sample.module',
         'predix.datasource',
-        'px.ngBindPolymer'
+        'px.ngBindPolymer',
+        'n3-pie-chart'
+         
     ]);
 
     /**

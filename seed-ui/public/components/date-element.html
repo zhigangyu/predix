@@ -1,0 +1,55 @@
+<link rel="import" href="../bower_components/polymer/polymer.html"/>
+<dom-module id="date-tag">
+    <template>
+        <div class="date" style="border-right:0;">
+            <p class="day" style="line-height:96px;">{{myDate}}</p>
+            <p class="year" style="margin-right:25px;margin-top:15px;">
+                <span style="font-size:26px;color:#333;">{{myMonth}} {{myYear}}</span>
+                <span style="font-size:20px;">{{myDay}}</span>
+                <span style="font-size:20px;">{{myTime}}</span>
+            </p>
+        </div>
+    </template>
+    <script>
+
+    Polymer({
+        is: "date-tag",
+        // add a callback to the element's prototype
+        ready: function() {
+           var now = new Date();
+                var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+                var day = days[now.getDay()];
+                console.log(now.getDay());
+                            console.log(day);
+
+                var month = months[now.getMonth()];
+                console.log(now.getMonth());
+                                        console.log(month);
+
+                var dd = now.getDate();
+                var yyyy = now.getFullYear();
+
+                hour=now.getHours();
+                minu=now.getMinutes();
+                sec=now.getSeconds();
+                if(sec<10)
+                    {sec="0"+sec;}
+                if(minu<10) 
+                    {minu="0"+minu;}
+                if(hour<10) 
+                    {hour="0"+hour;}
+                var tt = hour + ":" + minu + ":" + sec;
+                this.myDate = dd;
+                this.myTime = tt;
+                this.myYear = yyyy;
+                this.myMonth = month;
+                this.myDay = day;
+            
+        }
+        
+
+    });
+    </script>
+</dom-module>
