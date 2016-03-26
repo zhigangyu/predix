@@ -9,7 +9,6 @@ public class Lathe implements Serializable {
 
 	private static final long serialVersionUID = 136780493247786437L;
 
-
 	private int id;
 
 	private String latheName;

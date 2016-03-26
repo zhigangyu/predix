@@ -1,65 +1,49 @@
 package com.pactera.predix.seed.data.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class Machine implements Serializable {
 
 	private static final long serialVersionUID = 4557265459030359225L;
 
-	private String id;
-	private String name;
-	private String type;
-	private int duration;
-	private Date start;
-	private double efficiency;
+	private String latheCode;
+	private int status;
+	
+	private String partNumber;
+	private String procedure;
+	
 
-	public String getId() {
-		return id;
+	public String getLatheCode() {
+		return latheCode;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setLatheCode(String latheCode) {
+		this.latheCode = latheCode;
 	}
 
-	public String getName() {
-		return name;
+	public int getStatus() {
+		return status;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setStatus(int status) {
+		this.status = status;
 	}
 
-	public String getType() {
-		return type;
+
+	public String getPartNumber() {
+		return partNumber;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public void setPartNumber(String partNumber) {
+		this.partNumber = partNumber;
 	}
 
-	public int getDuration() {
-		return duration;
+	public String getProcedure() {
+		return procedure;
 	}
 
-	public void setDuration(int duration) {
-		this.duration = duration;
-	}
-
-	public Date getStart() {
-		return start;
-	}
-
-	public void setStart(Date start) {
-		this.start = start;
-	}
-
-	public double getEfficiency() {
-		return efficiency;
-	}
-
-	public void setEfficiency(double efficiency) {
-		this.efficiency = efficiency;
+	public void setProcedure(String procedure) {
+		this.procedure = procedure;
 	}
 
 }

@@ -1,8 +1,6 @@
 package com.pactera.predix.seed.data.service;
 
-import java.util.Date;
 import java.util.List;
-import java.util.Vector;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.pactera.predix.seed.data.dao.LatheDao;
 import com.pactera.predix.seed.data.domain.Lathe;
+import com.pactera.predix.seed.data.domain.LatheEvent;
+import com.pactera.predix.seed.data.domain.LatheEventValue;
 import com.pactera.predix.seed.data.domain.Machine;
 
 @RestController
@@ -20,20 +20,6 @@ public class SeedService {
 	
 	@Autowired
 	private LatheDao latheDao;
-	
-	@RequestMapping(value = "/api/q", method = RequestMethod.GET, produces = { "application/json" })
-	public List<Machine> queryMachines() {
-		Machine m = new Machine();
-		m.setId("M1");
-		m.setDuration(456);
-		m.setEfficiency(50);
-		m.setName("MH98U");
-		m.setStart(new Date());
-		m.setType("M");
-		List<Machine> list = new Vector<Machine>();
-		list.add(m);
-		return list;
-	}
 	
 	@RequestMapping(value = "/api/lathes", method = RequestMethod.POST, produces = { "application/json" })
 	public int saveLathe(@RequestBody Lathe lathe){
@@ -55,4 +41,42 @@ public class SeedService {
 	public void removeLathes(@PathVariable int id){
 		latheDao.deleteLatheById(id);
 	}
+	/**
+	 * query lathe
+	 * @return
+	 */
+	@RequestMapping(value = "/api/machines", method = RequestMethod.GET, produces = { "application/json" })
+	public List<Machine> queryMachines() {
+		return latheDao.queryMachines();
+	}
+	/**
+	 * add a new lathe
+	 * @param lathe
+	 * @return
+	 */
+	@RequestMapping(value = "/api/machines", method = RequestMethod.POST, produces = { "application/json" })
+	public String saveMachines(@RequestBody Machine lathe){
+		latheDao.insertMachine(lathe);
+		return "OK";
+	}
+	/**
+	 * save lateh status
+	 * @param latheEvent
+	 * @return
+	 */
+	@RequestMapping(value = "/api/latheevent", method = RequestMethod.POST, produces = { "application/json" })
+	public String saveLatheEvent(@RequestBody LatheEvent latheEvent){
+		latheDao.insertLatheEvent(latheEvent);
+		return "OK";
+	}
+	/**
+	 * query current machine status
+	 * @param code
+	 * @return
+	 */
+	@RequestMapping(value = "/api/lathe/{code}", method = RequestMethod.GET, produces = { "application/json" })
+	public List<LatheEventValue> queryLatheValue(@PathVariable("code") String code){
+		return latheDao.queryLatheEventValue(code);
+	}
+	
 }

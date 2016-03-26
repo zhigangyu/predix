@@ -9,19 +9,16 @@ import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletCon
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
-import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
-import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 
 @EnableAutoConfiguration(exclude = {
 
 })
 @ComponentScan(basePackages = "com.pactera.predix.seed.data")
-@EnableResourceServer
+//@EnableResourceServer
 @SpringBootApplication
-public class Application extends ResourceServerConfigurerAdapter {
+//public class Application extends ResourceServerConfigurerAdapter {
+public class Application  {
+	
 	private static final Logger log = LoggerFactory.getLogger(Application.class);
 
 	public static void main(String[] args) {
@@ -33,7 +30,7 @@ public class Application extends ResourceServerConfigurerAdapter {
 	public TomcatEmbeddedServletContainerFactory tomcatEmbeddedServletContainerFactory() {
 		return new TomcatEmbeddedServletContainerFactory();
 	}
-	
+	/*
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
 		http.antMatcher("/api/**").authorizeRequests().anyRequest()
@@ -44,7 +41,7 @@ public class Application extends ResourceServerConfigurerAdapter {
 	public void configure(ResourceServerSecurityConfigurer resources)
 			throws Exception {
 		resources.resourceId("openid");
-	}
+	}*/
 	
 	
 
