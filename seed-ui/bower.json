@@ -39,7 +39,8 @@
     "google-analytics": "~0.1.0",
     "angular-google-chart": "https://github.com/angular-google-chart/angular-google-chart.git#^0.1.0",
     "ref-digital-meter": "https://github.com/PredixDev/ref-digital-meter.git",
-    "pie-chart": "https://github.com/n3-charts/pie-chart.git#^1.0.0"
+    "pie-chart": "https://github.com/n3-charts/pie-chart.git#^1.0.0",
+    "ngRadialGauge": "https://github.com/stherrienaspnet/ngRadialGauge.git"
   },
   "resolutions": {
     "es6-promise": "~v3.0.2",

@@ -67,8 +67,8 @@
               <img src="images/product_00.jpg" width="173" height="102">
               <div class="p_name">-- {{ item.latheCode }} --</div>
           </div>
-          <div class="serial_number" style="line-height:30px;">Part number: A267180-1</div>
-          <div class="serial_number">Procedure: op100</div>
+          <div class="serial_number" style="line-height:30px;">Part number: {{item.partNumber}}</div>
+          <div class="serial_number">Procedure: {{item.procedure}}</div>
           <div class="product_button">
               <span class="icon_status">
               <img ng-src="images/yellow.png" ng-if="item.status == 3">

@@ -10,7 +10,7 @@ define([
     'interceptors',
     'px-datasource',
     'ng-bind-polymer',
-    'pie-chart'
+    'ngRadialGauge'
 ], function ($, angular) {
     'use strict';
 
@@ -24,8 +24,8 @@ define([
         'app.interceptors',
         'sample.module',
         'predix.datasource',
-        'px.ngBindPolymer',
-        'n3-pie-chart'
+        'ngRadialGauge',
+        'px.ngBindPolymer'
          
     ]);
 
@@ -44,7 +44,7 @@ define([
             tabs: [
                 {icon: 'fa-tachometer', state: 'dashboards', label: 'Dashboards'},
                 {icon: 'fa-comment-o', state: 'lathestatus', label: 'Lathe Status'},
-                {icon: 'fa-file-o', state: 'blankpage', label: 'Blank Page', subitems: [
+                {icon: 'fa-file-o', state: 'blankpage', label: 'Report', subitems: [
                     {state: 'blanksubpage', label: 'Blank Sub Page'}
                 ]}
             ]

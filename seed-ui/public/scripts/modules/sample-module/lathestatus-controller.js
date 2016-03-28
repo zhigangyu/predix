@@ -17,8 +17,8 @@ define(['angular', './sample-module'], function(angular, sampleModule) {
             });
         };
         setInterval(function(){
-            //$scope.$apply(updateClock);
-        },9000);
+            $scope.$apply(updateClock);
+        },5000);
 
         updateClock();
 
