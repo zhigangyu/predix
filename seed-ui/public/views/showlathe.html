@@ -133,7 +133,7 @@ h1{}
            <div class="graph_box">
             <div class="graph_box_two temperature">
                 <span class="graph_title">Spindle speed</span>
-                <span style="font-size:16px;color:#4F6094;">Setting Value:3600r</span>
+                <span style="font-size:16px;color:#4F6094;">Setting Value:2200r/min</span>
                 <span class="temperature_graph">
                 	
                 	<div width="230" ng-radial-gauge ranges="ranges" value="value" value-unit="unit" precision="precision" lower-limit="lowerLimit" upper-limit="upperLimit" class="speed_svg"></div>
@@ -146,7 +146,7 @@ h1{}
                 <div class="f_l" style="">
                     <span class="speed_value"><b>Current Value:</b> <br><br><span class="value">{{rapidTraverse}}</span>&nbsp;&nbsp;mm/min</span> 
                     <span class="rapid_right f_r"><div style="width: 160px; height: 80px;  background-color: grey; margin-left:1px; margin-top:-10px;">
-                <ref-digital-meter id="firstMeter" percentage="{{rapidTraverse/30/1.5*100}}"></ref-digital-meter>
+                <ref-digital-meter id="firstMeter" percentage="{{rapidTraverse/30/1.5*100}}"></ref-digital-meter><span style="position:absolute;top:140px;right:40px;">(%)</span>
                 </div></span>
                 </div>
             </div>
