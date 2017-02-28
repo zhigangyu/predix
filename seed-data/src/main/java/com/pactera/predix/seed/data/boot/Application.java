@@ -14,9 +14,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 })
 @ComponentScan(basePackages = "com.pactera.predix.seed.data")
-//@EnableResourceServer
 @SpringBootApplication
-//public class Application extends ResourceServerConfigurerAdapter {
 public class Application  {
 	
 	private static final Logger log = LoggerFactory.getLogger(Application.class);
@@ -30,19 +28,5 @@ public class Application  {
 	public TomcatEmbeddedServletContainerFactory tomcatEmbeddedServletContainerFactory() {
 		return new TomcatEmbeddedServletContainerFactory();
 	}
-	/*
-	@Override
-	public void configure(HttpSecurity http) throws Exception {
-		http.antMatcher("/api/**").authorizeRequests().anyRequest()
-				.authenticated();
-	}
-
-	@Override
-	public void configure(ResourceServerSecurityConfigurer resources)
-			throws Exception {
-		resources.resourceId("openid");
-	}*/
-	
-	
 
 }

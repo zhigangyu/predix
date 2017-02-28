@@ -31,19 +31,4 @@ public class IndexService {
 	public String getHelloMessage() {
 		return "Hello ray" + message;
 	}
-	/*
-	@Autowired
-	RedisTemplate<Serializable, Serializable> redisTemplate;
-	
-	@RequestMapping(value = "/api/foo", method = RequestMethod.POST, produces = { "application/json" })
-	public void saveFoo(@RequestBody Lathe lathe){
-		redisTemplate.execute(new RedisCallback<Object>(){
-
-			@Override
-			public Object doInRedis(RedisConnection connection) throws DataAccessException {
-				//connection.set(redisTemplate.getStringSerializer().serialize("lathe.uid." + lathe.getId()),redisTemplate.getStringSerializer().serialize(lathe));
-				return null;
-			}});
-	}*/
-
 }

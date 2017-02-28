@@ -11,7 +11,6 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 public class AppConfiguration{
 	@Bean
 	public DataSource dataSource() {
-		// return DataSourceBuilder.create().build();
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("org.postgresql.Driver");
 		dataSource.setUrl("jdbc:postgresql://localhost/lathe");
@@ -23,33 +22,6 @@ public class AppConfiguration{
 		//dataSource.setPassword("d22f5ce2b8bb4951a4deb694f5c5a417");
 		return dataSource;
 	}
-	/*
-	@Bean
-	public JedisConnectionFactory jedisConnFactory(){
-		JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory();
-		jedisConnectionFactory.setUsePool(true);
-		jedisConnectionFactory.setHostName("192.168.145.130");
-		jedisConnectionFactory.setPort(6379);
-		return jedisConnectionFactory;
-	}
-	
-	@Bean
-	@Autowired
-	public RedisTemplate<Serializable, Serializable> redisTemplate(JedisConnectionFactory jedisConnFactory){
-		RedisTemplate<Serializable, Serializable> redisTemplate = new RedisTemplate<Serializable, Serializable>();
-		redisTemplate.setConnectionFactory(jedisConnFactory);
-		return redisTemplate;
-	}
-	*/
 }
 
-/*
-@Configuration
-public class AppConfiguration extends AbstractCloudConfig  {
-	@Bean
-    public DataSource dataSource() {
-    		return connectionFactory().dataSource();
-    }
-	
-}*/
 
